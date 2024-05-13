@@ -44,9 +44,12 @@ def test_profiles_index_view(profile_1, profile_2):
     content = response.content.decode()
 
     # Verifies that links to profiles are present in the content
-    expected_content_1 = '<a href="/profiles/Harry%20Potter/">Harry Potter</a>'
-    expctd_contnt_2 = '<a href="/profiles/Ronald%20Weasley/">Ronald Weasley</a>'
-
+    expected_content_1 = (
+    '<a href="/profiles/Harry%20Potter/">Harry Potter</a>'
+    )
+    expctd_contnt_2 = (
+        '<a href="/profiles/Ronald%20Weasley/">Ronald Weasley</a>'
+    )
     assert expected_content_1 in content and expctd_contnt_2 in content
     assert response.status_code == 200
     assertTemplateUsed(response, "profiles/index.html")

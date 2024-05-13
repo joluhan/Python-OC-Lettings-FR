@@ -66,7 +66,9 @@ def test_lettings_letting_view(address_2):
     content = response.content.decode()
 
     # Checking the content of the details page for Letting
-    expected_content = '<h1 class="page-header-ui-title mb-3 display-6">The Burrow</h1>'
+    expected_content = (
+        '<h1 class="page-header-ui-title mb-3 display-6">The Burrow</h1>'
+    )
     assert expected_content in content
     assert response.status_code == 200
     assertTemplateUsed(response, "lettings/letting.html")

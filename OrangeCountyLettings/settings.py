@@ -49,7 +49,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r7l)2nd!luhij+$o9#1a61i^gs9yv=hbkola#9$477$dm04*=x'
+SECRET_KEY = (
+    'django-insecure-r7l)2ndl!luhij+s0#9#la61i^gs9yv=hbkolal9#$947$dm04=*x'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -117,19 +119,14 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
+# Define a base path for auth validators to shorten lines
+auth_base = 'django.contrib.auth.password_validation.'
+
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': auth_base + 'UserAttributeSimilarityValidator'},
+    {'NAME': auth_base + 'MinimumLengthValidator'},
+    {'NAME': auth_base + 'CommonPasswordValidator'},
+    {'NAME': auth_base + 'NumericPasswordValidator'},
 ]
 
 
@@ -149,9 +146,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = (
+#    'whitenoise.storage.CompressedManifest' + 'StaticFilesStorage'
+# )
 STATICFILES_EXCLUDE_PATTERNS = ['assets/img/backgrounds/bg-waves.svg']
 
 # Default primary key field type
