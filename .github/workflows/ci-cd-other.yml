@@ -45,7 +45,7 @@ jobs:
     - name: Run Linting
       id: linting
       run: |
-        flake8 . --ignore=E501  --config .flake8
+        flake8 . --ignore=E501 --config .flake8
       if: ${{ steps.dot_env.outcome }} == "success"
 
     # Step to run the tests   
