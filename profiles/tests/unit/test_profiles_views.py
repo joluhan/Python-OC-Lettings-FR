@@ -46,7 +46,7 @@ def test_profiles_index_view(profile_1, profile_2):
     # Verifies that links to profiles are present in the content
     expected_content_1 = (
         '<a href="/profiles/Harry%20Potter/">Harry Potter</a>'
-        )
+    )
     expctd_contnt_2 = (
         '<a href="/profiles/Ronald%20Weasley/">Ronald Weasley</a>'
     )
