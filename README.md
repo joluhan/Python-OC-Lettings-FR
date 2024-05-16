@@ -24,7 +24,7 @@ Orange County Lettings is a start-up in the real estate rental industry. The sta
 
 ## Documentation
 
-To access the complete documentation for this project please click here: --> [Complete documentation](https://orangecountylettings.readthedocs.io/en/latest/)
+To access the complete documentation for this project please click here: --> [Complete documentation](https://python-oc-lettings-joluhan.readthedocs.io/en/latest/)
 
 
 ## Development
