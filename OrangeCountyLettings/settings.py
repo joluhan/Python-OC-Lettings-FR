@@ -58,7 +58,7 @@ SECRET_KEY = (
 DEBUG = True
 
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='python-oc-lettings-fr-zhd5.onrender.com,localhost,127.0.0.1').split(',')
 
 
 # Application definition
