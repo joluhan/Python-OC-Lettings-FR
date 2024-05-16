@@ -11,7 +11,6 @@ from pathlib import Path
 import sentry_sdk
 from dotenv import load_dotenv
 from sentry_sdk.integrations.django import DjangoIntegration
-from decouple import config
 
 # Loading environment variables
 load_dotenv()
@@ -58,7 +57,7 @@ SECRET_KEY = (
 DEBUG = True
 
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='python-oc-lettings-fr-zhd5.onrender.com,localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
