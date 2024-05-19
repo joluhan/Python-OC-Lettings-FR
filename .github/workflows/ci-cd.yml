@@ -14,7 +14,7 @@ jobs:
     # Runtime environment configuration (Ubuntu latest, Python 3.12)
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: "danihire/oc_lettings"
+      IMAGE_NAME: "orange-county-lettings"
     strategy:
       matrix:
         python-version: [3.12]
