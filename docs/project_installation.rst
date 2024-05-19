@@ -6,7 +6,7 @@ Repository cloning
 
 Download the entire repository at:
 
-https://github.com/hire-blac/OrangeCountyLettings
+https://github.com/joluhan/Python-OC-Lettings-FR
 
 To do this, please open your Order Terminal:
 
@@ -15,7 +15,7 @@ To do this, please open your Order Terminal:
 
 2. Subsequently, enter the command in your terminal:
 
-``git clone https://github.com/hire-blac/OrangeCountyLettings.git``
+``git clone https://github.com/joluhan/Python-OC-Lettings-FR``
 
 then press enter to create your local clone.
 
