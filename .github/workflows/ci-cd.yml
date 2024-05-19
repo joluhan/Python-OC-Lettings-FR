@@ -13,8 +13,6 @@ jobs:
   build:
     # Runtime environment configuration (Ubuntu latest, Python 3.12)
     runs-on: ubuntu-latest
-    env:
-      IMAGE_NAME: "orange-county-lettings"
     strategy:
       matrix:
         python-version: [3.12]
